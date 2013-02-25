@@ -1,0 +1,454 @@
+<includes>
+<!-- ===================================================================================== -->
+<!-- ============================= TEXT-DROPPER VIEW ID 911 ============================== -->
+<!-- =================================== TV Shows only =================================== -->
+	<include name="Dropper">
+		<control type="image">
+		<posy>-20</posy>
+		<posx>0</posx>
+		<width>1300</width>
+		<height>750</height>
+		<texture>ContentPanel60.png</texture>
+		<visible>Control.IsVisible(911)</visible>
+		</control>
+		<control type="image">
+			<visible>Container.Content(tvshows)</visible>
+			<posx>960</posx>
+			<posy>500</posy>
+			<width>276</width>
+			<height>107</height>
+			<texture background="false" fallback="logo/fallback.png">$INFO[ListItem.path]/logo.png</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<visible>Control.IsVisible(911)</visible>
+		</control>
+		<control type="image">
+			<width>200</width>
+			<height>128</height>
+			<posx>540</posx>
+			<posy>425</posy>
+			<aspectratio>keep</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+			<texture>$INFO[listitem.Studio,flagging/studios/,.png]</texture>
+			<visible>Control.IsVisible(911)</visible>
+		</control>
+		<control type="image">
+			<visible>Container.Content(tvshows)</visible>
+			<posx>50</posx>
+			<posy>500</posy>
+			<width>276</width>
+			<height>107</height>
+			<texture background="false" fallback="logo/fallback.png">$INFO[ListItem.path]/logo.png</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<visible>Control.IsVisible(911)</visible>
+		</control>
+		<control type="image">
+			<visible>Container.Content(tvshows)</visible>
+			<posx>900</posx>
+			<posy>500</posy>
+			<width>276</width>
+			<height>107</height>
+			<texture background="false" fallback="logo/fallback.png">$INFO[ListItem(0).path]../logo.png</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<visible>Control.IsVisible(911)</visible>
+		</control>
+		<control type="image">
+			<visible>Container.Content(tvshows)</visible>
+			<posx>50</posx>
+			<posy>500</posy>
+			<width>276</width>
+			<height>107</height>
+			<texture background="false" fallback="logo/fallback.png">$INFO[ListItem(0).path]../logo.png</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<visible>Control.IsVisible(911)</visible>
+		</control>		
+		<control type="image">
+			<visible>Container.Content(tvshows)</visible>
+			<posx>900</posx>
+			<posy>500</posy>
+			<width>276</width>
+			<height>107</height>
+			<texture background="false" fallback="logo/fallback.png">$INFO[ListItem(0).path]../../logo.png</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<visible>Control.IsVisible(911)</visible>
+		</control>
+		<control type="image">
+			<visible>Container.Content(tvshows)</visible>
+			<posx>50</posx>
+			<posy>500</posy>
+			<width>276</width>
+			<height>107</height>
+			<texture background="false" fallback="logo/fallback.png">$INFO[ListItem(0).path]../../logo.png</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<visible>Control.IsVisible(911)</visible>
+		</control>
+		<control type="image">
+			<visible>Container.Content(tvshows)</visible>
+			<posx>900</posx>
+			<posy>500</posy>
+			<width>276</width>
+			<height>107</height>
+			<texture background="false" fallback="logo/fallback.png">$INFO[ListItem(0).path]../../../logo.png</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<visible>Control.IsVisible(911)</visible>
+		</control>
+		<control type="image">
+			<visible>Container.Content(tvshows)</visible>
+			<posx>50</posx>
+			<posy>500</posy>
+			<width>276</width>
+			<height>107</height>
+			<texture background="false" fallback="logo/fallback.png">$INFO[ListItem(0).path]../../../logo.png</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<visible>Control.IsVisible(911)</visible>
+		</control>		
+		<control type="label">
+			<description>Episodes Values</description>
+			<posx>220</posx>
+			<posy>620</posy>
+			<width>840</width>
+			<height>25</height>
+			<label>$INFO[listitem.episode] Episode(n) in $INFO[ListItem.Property(TotalSeasons)] Staffel(n)</label>
+			 <align>center</align>
+			<aligny>center</aligny>
+			<font>font13</font>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(911)</visible>
+		</control>
+		<control type="label">
+			<description>Episodes Values</description>
+			<posx>220</posx>
+			<posy>650</posy>
+			<width>840</width>
+			<height>25</height>
+			<label>davon</label>
+			 <align>center</align>
+			<aligny>center</aligny>
+			<font>font13</font>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(911)</visible>
+		</control>
+		<control type="label">
+			<description>Episodes Values</description>
+			<posx>220</posx>
+			<posy>680</posy>
+			<width>840</width>
+			<height>25</height>
+			<label>$INFO[ListItem.Property(WatchedEpisodes)] gesehene Episoden und $INFO[ListItem.Property(UnWatchedEpisodes)] nicht gesehene</label>
+			 <align>center</align>
+			<aligny>center</aligny>
+			<font>font13</font>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(911)</visible>
+		</control>		
+		<control type="group" id="7001">
+			<posx>-120</posx>
+			<posy>330</posy>
+			<visible>Control.IsVisible(911) + Container.OnNext</visible>
+			<animation effect="slide" end="-100,0" time="250" reversible="false">Hidden</animation>
+			<control type="group">
+				<posx>220</posx>
+				<animation effect="rotatey" center="200" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(-2).Icon</info>
+					<bordertexture border="4">button-nofocus2.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+			</control>
+			<control type="group">
+				<posx>900</posx>
+				<animation effect="rotatey" center="1280" start="65" end="65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(2).Icon</info>
+					<bordertexture border="4">button-nofocus2.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+			</control>
+			<control type="group">
+				<posx>800</posx>
+				<animation effect="rotatey" center="1180" start="65" end="65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(1).Icon</info>
+					<bordertexture border="4">button-nofocus2.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Container.OnNext</visible>
+				<animation effect="slide" end="-120,0" time="250" reversible="false">Hidden</animation>
+				<control type="group">
+					<posx>700</posx>
+					<visible>Container.OnNext</visible>
+					<animation effect="rotatey" center="1080" start="0" end="-65" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+					<animation effect="rotatey" center="1080" start="65" end="65" time="0" condition="true">Conditional</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>576</width>
+						<height>107</height>
+						<info>Container(911).ListItem(0).Icon</info>
+						<bordertexture border="4">folder-focus.png</bordertexture>
+						<bordersize>4</bordersize>
+					</control>
+				</control>
+				<control type="group">
+					<posx>700</posx>
+					<visible>Container.OnNext</visible>
+					<animation effect="rotatey" center="1080" start="0" end="-65" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+					<animation effect="rotatey" center="1080" start="65" end="65" time="0" condition="true">Conditional</animation>
+				<control type="label">
+					<posx>0</posx>
+					<posy>180</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(0).Title</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font35_title</font>
+					<visible>Control.HasFocus(911)</visible>
+				</control>
+				</control>
+				<control type="group">
+					<posx>460</posx>
+					<visible>Container.OnNext</visible>
+					<animation effect="rotatey" center="450" start="0" end="-125" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>576</width>
+						<height>107</height>
+						<info>Container(911).ListItem(-1).Icon</info>
+						<bordertexture border="4">button-nofocus2.png</bordertexture>
+						<bordersize>4</bordersize>
+					</control>
+				</control>
+			</control>
+		</control>
+
+		<control type="group" id="7002">
+			<posx>-120</posx>
+			<posy>330</posy>
+			<visible>Control.IsVisible(911) + Container.OnPrevious</visible>
+			<animation effect="slide" end="100,0" time="250" reversible="false">Hidden</animation>
+			<control type="group">
+				<posx>700</posx>
+				<animation effect="rotatey" center="1080" start="65" end="65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(2).Icon</info>
+					<bordertexture border="4">button-nofocus2.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+			</control>
+			<control type="group">
+				<posx>20</posx>
+				<animation effect="rotatey" center="0" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(-2).Icon</info>
+					<bordertexture border="4">button-nofocus2.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+			</control>
+			<control type="group">
+				<posx>120</posx>
+				<animation effect="rotatey" center="100" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(-1).Icon</info>
+					<bordertexture border="4">button-nofocus2.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Container.OnPrevious</visible>
+				<animation effect="slide" end="120,0" time="250" reversible="false">Hidden</animation>
+				<control type="group">
+					<posx>220</posx>
+					<visible>Container.OnPrevious</visible>
+					<animation effect="rotatey" center="200" start="0" end="65" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+					<animation effect="rotatey" center="200" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>576</width>
+						<height>107</height>
+						<info>Container(911).ListItem(0).Icon</info>
+						<bordertexture border="4">folder-focus.png</bordertexture>
+						<bordersize>4</bordersize>
+					</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>210</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(0).Title</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font35_title</font>
+					<visible>Control.HasFocus(911)</visible>
+				</control>
+				</control>
+				<control type="group">
+					<posx>460</posx>
+					<visible>Container.OnPrevious</visible>
+					<animation effect="rotatey" center="840" start="0" end="65" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>576</width>
+						<height>107</height>
+						<info>Container(911).ListItem(1).Icon</info>
+						<bordertexture border="4">button-nofocus2.png</bordertexture>
+						<bordersize>4</bordersize>
+					</control>
+				</control>
+			</control>
+		</control>
+
+		<control type="group" id="7000">
+			<posx>-120</posx>
+			<posy>330</posy>
+			<visible>Control.IsVisible(911) + !Control.IsVisible(7001)  + !Control.IsVisible(7002)</visible>
+			<control type="group">
+				<posx>120</posx>
+				<animation effect="rotatey" center="100" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(-2).Icon</info>
+					<bordertexture border="4">button-nofocus2.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+			</control>
+			<control type="group">
+				<posx>220</posx>
+				<animation effect="rotatey" center="200" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(-1).Icon</info>
+					<bordertexture border="4">button-nofocus2.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+			</control>
+			<control type="group">
+				<posx>800</posx>
+				<animation effect="rotatey" center="1180" start="65" end="65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(2).Icon</info>
+					<bordertexture border="4">button-nofocus2.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+			</control>
+			<control type="group">
+				<posx>700</posx>
+				<animation effect="rotatey" center="1080" start="65" end="65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(1).Icon</info>
+					<bordertexture border="4">button-nofocus2.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+			</control>
+			<control type="group">
+				<posx>460</posx>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(0).Icon</info>
+					<bordertexture border="4">folder-focus.png</bordertexture>
+					<bordersize>4</bordersize>
+					<visible>Control.HasFocus(911)</visible>
+				</control>
+				<control type="label">
+					<posx>15</posx>
+					<posy>210</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(0).Title</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font35_title</font>
+					<visible>Control.HasFocus(911)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>Container(911).ListItem(0).Icon</info>
+					<bordertexture border="4">button-nofocus2.png</bordertexture>
+					<bordersize>4</bordersize>
+					<visible>!Control.HasFocus(911)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="wraplist" id="911">
+			<description>Fake list to control coverflow movement</description>
+			<visible>Container.Content(TVShows)</visible>
+			<posx>340</posx>
+			<posy>330</posy>
+			<width>366</width>
+			<height>107</height>
+			<onleft>57</onleft>
+			<onright>57</onright>
+			<onup>9000</onup>
+			<ondown>61</ondown>
+			<viewtype label="Text-Dropper">list</viewtype>
+			<pagecontrol>61</pagecontrol>
+			<orientation>horizontal</orientation>
+			<scrolltime>250</scrolltime>
+			<focusedposition>3</focusedposition>
+			<itemlayout height="1" width="1">
+			</itemlayout>
+			<focusedlayout height="350" width="360">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>576</width>
+					<height>107</height>
+					<info>ListItem.Art(banner)</info>
+					<aspectratio>stretch</aspectratio>
+					<bordertexture border="4">button-nofocus2.png</bordertexture>
+					<bordersize>4</bordersize>
+					<visible>!Control.IsVisible(7001) + !Control.IsVisible(7002)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	</includes>
